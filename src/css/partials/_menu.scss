@@ -1,12 +1,10 @@
 header {
   width: 100%;
 
-  top: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 2;
-
   padding-top: 1rem;
+
+  z-index: 2;
+  position: relative;
 
   .navbar {
     max-width: 90rem;
@@ -38,6 +36,7 @@ header {
           top: 0;
           right: 0;
           position: fixed;
+
           background-color: $blue-dark;
 
           padding-top: $gap-4;
