@@ -29,7 +29,7 @@
 
 # :books: Project
 
-## This is the development of a website concept for the Spider-man Miles Morales launch.
+This is the development of a website concept for the Spider-man Miles Morales launch.
 
 This project is developed using plain HTML, SASS for styling and GSAP3 for the animations and of course, Javascript. The concept comes from the Designer Násser Yousef Ali on [figma](https://www.figma.com/file/zm3fLTS6fk4gaYzaCWhMaw/Spider-man?node-id=1%3A3).
 
