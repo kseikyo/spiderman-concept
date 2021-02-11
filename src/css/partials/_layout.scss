@@ -1,0 +1,107 @@
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+
+  padding: 2.25rem 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 85vh;
+
+  overflow: none;
+
+  @include responsive(60rem) {
+    flex-direction: column-reverse;
+    height: auto;
+    overflow: hidden;
+  }
+
+  // Hero text on home page
+  .content {
+    // Following the grid system on figma layout
+    max-width: 36rem;
+
+    display: flex;
+    // When changing flex-direction is column, align-items and justify-content swap
+    flex-direction: column;
+    // Align items on the left side of the container
+    align-items: flex-start;
+
+    .content__btns {
+      // Max screen size where buttons break 431px OR 26.9375rem
+      @include responsive(26.9375rem) {
+        .btn {
+          padding: 0.5rem 0.5rem;
+        }
+      }
+    }
+  }
+
+  // Hero image on right side of home page
+  .content__image {
+    .spiderman {
+      // Image overflows grid layout
+      width: 150%;
+      transform: translateX(-10.625rem);
+
+      @include responsive(60rem) {
+        width: 100%;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+.bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+
+  @include display-grid;
+  place-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    @include linear-blue-background;
+  }
+}
+
+.bg__loader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+
+  @include display-grid;
+  place-items: center;
+
+  @include linear-red-background;
+
+  overflow: hidden;
+
+  .loading-logo {
+    max-width: 90rem;
+  }
+}

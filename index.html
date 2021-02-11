@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-man: Miler Morales | PS5</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/svg-inject.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <section class="bg__loader">
+        <img class="loading__logo" src="src/assets/logo-spiderman.svg" alt="Spider" onload="SVGInject(this)" />
+    </section>
+
+
+    <!-- HEADER -->
+    <header class="">
+        <nav class="navbar">
+            <div class="nav__menu">
+                <div class="logo">
+                    <img src="src/assets/logo-spiderman.svg" alt="Spider" onload="SVGInject(this)" />
+                </div>
+                <ul class="nav__list">
+                    <li><a href="" class="nav__link">Home</a></li>
+                    <li><a href="" class="nav__link">Story</a></li>
+                    <li><a href="" class="nav__link">Wallpapers</a></li>
+                    <li><a href="" class="nav__link nav__link-red">#BeYourself</a></li>
+                </ul>
+            </div>
+            <div class="nav__social">
+                <img src="src/assets/icon-facebook.svg" alt="" onload="SVGInject(this)">
+                <img src="src/assets/icon-instagram.svg" alt="" onload="SVGInject(this)">
+                <img src="src/assets/icon-youtube.svg" alt="" onload="SVGInject(this)">
+                <img src="src/assets/icon-twitter.svg" alt="" onload="SVGInject(this)">
+            </div>
+            <div class="hamburger mr-3"></div>
+        </nav>
+    </header>
+
+    <!-- BG-VIDEO -->
+    <section class="bg__video">
+    </section>
+
+    <!-- CONTAINER -->
+    <section class="container">
+        <main class="content">
+            <div class="px-1">
+                <img src="src/assets/spiderman-text.png" alt="Spider-man Miles Morales">
+            </div>
+            <p class="my-2 content__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora cumque praesentium nam perferendis est
+                nesciunt mollitia id, consequuntur, eius consequatur excepturi suscipit rem aperiam ea a cupiditate
+                quibusdam facere quia?
+            </p>
+            <div class="content__btns">
+                <a href="#" class="btn btn-primary">Pre-order now</a>
+                <a href="#" class="btn btn-secondary border ml-2">Watch the teaser</a>
+            </div>
+            <div class="flex align-center mt-1 content__icons">
+                <img class="w-auto" src="src/assets/ps.svg" alt="" onload="SVGInject(this)">
+                <img class="w-auto ml-2" src="src/assets/marvel.svg" alt="" onload="SVGInject(this)">
+            </div>
+        </main>
+        <aside class="content__image">
+            <img class="spiderman"
+                src="src/assets/spider-man.png" alt="Spider-man">
+        </aside>
+    </section>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="src/js/app.js"></script>
+    <script src="src/js/isMobile.js"></script>
+</body>
+
+</html>

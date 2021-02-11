@@ -1,0 +1,22 @@
+@mixin linear-red-background {
+  background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+}
+
+@mixin linear-blue-background {
+  background: linear-gradient(101.47deg, $blue-dark 26.38%, $blue-dark-opaque 50.07%, $blue-dark 73.17%);
+}
+
+@mixin btn-transform {
+  transform: skewX(-10deg) scale(1.05);
+}
+
+@mixin responsive($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin display-grid {
+  display: grid;
+  display: -ms-grid;
+}

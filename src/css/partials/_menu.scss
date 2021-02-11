@@ -1,0 +1,201 @@
+header {
+  width: 100%;
+
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+
+  padding-top: 1rem;
+
+  .navbar {
+    max-width: 90rem;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // Left items on navbar
+    .nav__menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .logo {
+        max-width: 5.5rem;
+      }
+
+      // List of links on navbar
+      .nav__list {
+        list-style: none;
+        display: flex;
+
+        @include responsive(60rem) {
+          flex-direction: column;
+          width: 0%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          position: fixed;
+          background-color: $blue-dark;
+
+          padding-top: $gap-4;
+
+          transition: 0.7s width ease;
+
+          &-open {
+            width: 65%;
+          }
+
+          li {
+            margin-top: $gap-2;
+            a.nav__link {
+              &::after,
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+
+        // Link
+        li {
+          margin-left: 1.5rem;
+
+          .nav__link {
+            display: inline-block;
+
+            font-size: 0.875rem;
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+            font-weight: 200;
+            color: $gray-3;
+
+            transition: 0.7s color ease;
+            padding: 0.5rem 1rem;
+
+            position: relative;
+
+            // Web going down effect on hover
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+
+              top: -2.5rem;
+              left: 50%;
+
+              width: 0.125rem;
+              height: 0;
+              transition: 0.4s height ease;
+
+              background: linear-gradient(
+                180deg,
+                $red-transparent 0%,
+                $red 100%
+              );
+            }
+
+            &:hover {
+              color: $white-light;
+
+              &::after {
+                height: 2.5rem;
+              }
+            }
+            &-red {
+              color: $red;
+
+              &:hover {
+                color: $red-light;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // List of social icons
+    .nav__social {
+      display: flex;
+
+      @include responsive(60rem) {
+        display: none;
+      }
+
+      // Icons
+      svg {
+        cursor: pointer;
+
+        margin-left: 1rem;
+        width: 1.5rem;
+
+        path,
+        circle {
+          transition: 0.4s fill ease, 0.4s transform ease;
+        }
+
+        &:hover {
+          path,
+          circle {
+            fill: $red-light;
+            transform: translateY(-0.1875rem);
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      display: none;
+      position: relative;
+
+      width: 2.5rem;
+      height: 2.5rem;
+
+      cursor: pointer;
+
+      @include responsive(60rem) {
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 33%;
+        left: 12%;
+        width: 75%;
+        height: 0.125rem;
+        border-radius: 0.125rem;
+        background-color: $white;
+        transition: 1s transform ease, 1s top ease;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 57%;
+        left: 12%;
+        width: 75%;
+        height: 0.125rem;
+        border-radius: 0.125rem;
+        background-color: $white;
+        transition: 1s transform ease, 1s top ease;
+      }
+
+      &-active {
+        &::after {
+          top: 48%;
+          transform: rotate(130deg);
+        }
+
+        &::before {
+          top: 48%;
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+}

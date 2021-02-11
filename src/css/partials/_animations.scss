@@ -1,0 +1,31 @@
+.bg__loader {
+  .loading__logo {
+    height: 15%;
+
+    path {
+      fill: transparent;
+
+      animation: loading-logo 12s ease infinite alternate;
+    }
+  }
+}
+
+@keyframes loading-logo {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+
+  60%,
+  100% {
+    stroke-width: 0.3;
+    fill: $white-dark;
+  }
+}
